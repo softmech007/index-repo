@@ -1,0 +1,18 @@
+YUM REPO
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+*Mount the RHEL dvd 
+#mount /dev/sr0 /mnt
+
+*make a directory
+#mkdir -p /var/ftp/rhel
+
+*Edit the below file
+vi /etc/yum.repos.d/rhel-local.repo
+
+[RHEL_7.5]
+name=RHEL-LOCAL-REPO
+baseurl=file:///var/ftp/rhel
+enabled=1
+gpgcheck=0
+
+:wq!

@@ -1,0 +1,32 @@
+Install Latest Java On RHEL /CentOS And Fedora
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+# cd /opt/jdk1.8.0_202
+
+Alternatives command is the best way to install java
+
+# alternatives --install /usr/bin/java java /opt/jdk1.8.0_202/bin/java 2
+
+Now we should set the jar and javac  path
+
+# alternatives --install /usr/bin/jar jar /opt/jdk1.8.0_202/bin/jar  2
+
+# alternatives --install /usr/bin/javac javac /opt/jdk1.8.0_202/bin/javac 2
+
+# alternatives --install /usr/bin/javac javac /opt/jdk1.8.0_202/bin/javac 2
+
+# alternatives --set javac /opt/jdk1.8.0_202/bin/javac
+
+Set java home variable use below command.
+#export JAVA_HOME=/opt/jdk1.8.0_202
+
+Path set  jre home variable use below command
+#export JRE_HOME=/opt/jdk1.8.0_202/jre/
+
+Setting the path variables use below command
+#export PATH=$PATH:/opt/jdk1.8.0_202/bin:/opt/jdk-18/jre/bin
+
+
+if the java command not running after setting the environment variables, so you can add the below lines in bashrc and profile files in the /etc directory.
+JAVA_HOME=/opt/jdk1.8.0_202/
+export JRE_HOME=/opt/jdk1.8.0_202/jre
+export PATH=$JAVA_HOME/bin:$PATH

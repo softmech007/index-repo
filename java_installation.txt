@@ -25,6 +25,7 @@ Path set  jre home variable use below command
 Setting the path variables use below command
 #export PATH=$PATH:/opt/jdk1.8.0_202/bin:/opt/jdk-18/jre/bin
 
+&
 
 if the java command not running after setting the environment variables, so you can add the below lines in bashrc and profile files in the /etc directory.
 JAVA_HOME=/opt/jdk1.8.0_202/
